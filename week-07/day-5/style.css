@@ -1,0 +1,96 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ABABAB, #F2F2F1 50%, #ABABAB);
+    display: flex;
+}
+
+#main-container{
+    width: 100%;
+    flex-direction: column;
+}
+
+#content{
+    margin: 5% auto 2% auto;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+}
+
+#main-image img{
+    width: 100%;
+    max-width: 660px;
+    background-size: cover;
+    display: block;
+}
+
+.left-arrow, .right-arrow{
+    background-color: #fff;
+    background-size: cover;
+    width: 100%;
+    max-width: 80px;
+    min-width: 30px;
+    position: relative;
+    flex: 1;
+}
+
+.left-arrow img{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+}
+
+.left-arrow img:hover{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    /*width: 10%;*/
+    /*border: 1px solid green;*/
+    /*box-shadow: 0 0 1em rgba(120,150,160,0.5);*/
+}
+
+.right-arrow img{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+#thumbnails{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    /*height: inherit; kell neki magassagot adni!!!*/
+    /*animation-duration: 0s;*/
+}
+
+#thumbnails img{
+    height: 100%;
+    /*height: 50px;*/
+    width: 10vw;
+    margin: 0 5px;
+    -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+     -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+        transition: all 1s ease;
+}
+
+#thumbnails img:hover{
+    height: 110%;
+    width: 15vw;
+    /*height: 80px;*/
+    margin: 0 5px;
+}

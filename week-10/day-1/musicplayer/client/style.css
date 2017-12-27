@@ -1,0 +1,288 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    color: #555555;
+    /*background-color: #ffffff;*/
+    display: flex;
+    justify-content: center;
+    /*background: linear-gradient(to bottom, #96ccca, #abe7e5 50%, #96ccca);*/
+    background-image: url("pics/2.jpg");
+    background-size: cover;
+}
+
+.white-board {
+    width: 100%;
+    max-width: 710px;
+    height: 410px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 700px;
+    max-height: 400px;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    border-color: black;
+    box-shadow: 0px 2px 1px 2px rgba(127,127,127,0.5);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.top-container {
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    /*max heightttel miert adott 0-at?*/
+    display: flex;
+}
+
+.control-panel {
+    width: 100%;
+    max-width: 700px;
+    height: 50px;
+    background-color: #ffffff;
+    /*max heightttel miert adott 0-at?*/
+}
+
+.left-container {
+    width: 100%;
+    max-width: 330px;
+    max-height: 350px;
+    /*itt nem kell flexbox, miert fel rendezodik?*/
+}
+
+.right-container {
+    width: 100%;
+    max-width: 370px;
+    max-height: 350px;
+}
+
+.logo-and-album {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100%;
+    width: 200px;
+    height: 130px;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#fox {
+    display: block;
+}
+
+.logo p {
+    margin: 15px 0px 0px 0px;
+    display: inline-block;
+}
+
+.ion-plus-round {
+    float: right;
+    margin: 15px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.album {
+    width: 100%;
+    width: 130px;
+    height: 130px;
+    background-image: url("pics/marteria.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.new-playlist-item {
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.playlists {
+    width: 100%;
+    max-width: 330px;
+    height: 220px;
+    border-right: 2px solid rgba(150,150,150,0.5);
+    box-sizing: border-box;
+    /*overflow-y: scroll;*/
+}
+
+.playlist-item {
+    border-spacing: 0px;
+    width: 100%;
+    color: #4c4f52;
+}
+
+.playlist-item tr td {
+    padding: 0px;
+    width: 30px;
+}
+
+.playlist-item tr td:first-child {
+    padding: 0px;
+    width: 270px;
+}
+
+.playlist-item tr td span {
+    padding-left: 10px;
+}
+
+.playlist-item tr.active-track {
+    background-color: #abe7e5;
+    cursor: pointer;
+}
+
+.ion-close-round {
+    font-size: 10px;
+    text-align: right;
+    /*margin: 0 10px;*/
+    cursor: pointer;
+}
+
+.currently-playing {
+    width: 100%;
+    max-width: 370px;
+    height: 58px;
+    box-sizing: border-box;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+.currently-playing-album-infos {
+    width: 100%;
+    width: 320px;
+    height: 60px;
+    padding: 10px 0 0 10px;
+    box-sizing: border-box;
+}
+
+.currently-playing-actions {
+    width: 100%;
+    width: 50px;
+    height: 60px;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #b4b4b4;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.album-title {
+    color: #a5a5a5;
+    font-size: 13px;
+}
+
+.currently-playing-actions .ion-android-star {
+    cursor: pointer;
+}
+
+.currently-playing-actions .ion-plus-round {
+    cursor: pointer;
+}
+
+.tracks {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.list-elements {
+    border-spacing: 0px;
+    width: 100%;
+    cursor: pointer;
+}
+
+tr:nth-of-type(odd) {
+    background-color: #eaeaea;
+}
+
+tr {
+    font-size: 12px;
+    line-height: 3;
+}
+
+.list-elements tr.active-track {
+    background-color: #abe7e5;
+}
+
+td {
+    padding: 0px 5px;
+}
+
+td.s-num {
+    padding-left: 15px;
+    color: #a5a5a5;
+    width: 10px;
+}
+
+.control-panel {
+    /*display: flex;*/
+    /*justify-content: space-around;
+    align-items: baseline;*/
+    position: relative;
+}
+
+audio {
+    width: 88%;
+    margin: 10px 0 0 60px;
+    position: absolute;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #fff !important;
+}
+
+audio::-webkit-media-controls-play-button {
+    margin-right: 50px;
+}
+
+audio::-webkit-media-controls-mute-button, video::-webkit-media-controls-mute-button {
+    margin-left: 30px;
+}
+
+audio::-internal-media-controls-download-button {
+    display: none;
+}
+
+.rewind {
+    height: 10px;
+    position: absolute;
+    left: 41px;
+    top: 21px;
+    z-index: 1;
+}
+
+.forward {
+    height: 10px;
+    position: absolute;
+    left: 95px;
+    top: 21px;
+    z-index: 1;
+}
+
+.shuffle {
+    height: 14px;
+    position: absolute;
+    left: 508px;
+    top: 19px;
+    z-index: 1;
+}
